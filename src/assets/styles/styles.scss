@@ -1,0 +1,387 @@
+// SCSS Variables
+$size-g: 5.9rem;
+$size-xl: 4.7rem;
+$size-l: 3.5rem;
+$size-m: 2.3rem;
+$size-s: 1.25rem;
+
+$text-white: #fff;
+$color-black: #000;
+$color-red: #ff4c4c;
+
+$padding-small: 10px;
+$padding-medium: 20px;
+
+$border-radius: 10px;
+$bg-gradient: linear-gradient(180deg, rgb(0, 0, 0) 100%, rgba(0, 0, 0, 0.68) 50%, rgb(0, 0, 0) 100%);
+
+$card-size-lg: 23rem;
+$card-size-md: 19rem;
+$card-size-sm: 10rem;
+
+$dept-icon-size: 8rem;
+$nav-icon-size: 50px;
+
+// Global styles
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+  -ms-overflow-style: none;
+  overflow-x: hidden;
+}
+
+h1, h2 {
+  font-family: "Lora", serif;
+  font-weight: 400;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.main-bg {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  background: url("../images/college.jpg") no-repeat center center/cover;
+}
+
+.main-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: $bg-gradient;
+  z-index: 2;
+  opacity: 0.9;
+}
+
+.main-content {
+  position: relative;
+  z-index: 2;
+}
+
+// Navbar styles
+.navbar {
+  margin-bottom: 20px;
+
+  .navbar-toggler-icon {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .nav-img{
+    height: $nav-icon-size;
+    width: $nav-icon-size;
+  }
+
+  .navbar-collapse ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+
+    li, .student_login a {
+      font-size: $size-s;
+      font-weight: 600;
+    }
+
+    li a {
+      color: $text-white !important;
+    }
+  }
+
+  .nav-btn {
+    margin-left: 3rem;
+    margin-right: 1rem;
+    color: #F23037;
+    font-size: $size-s;
+    font-family: "Lora", serif;
+    font-weight: 900;
+    border: 2px solid white;
+    padding: 0.5rem 2.5rem;
+  }
+}
+
+// Hero section styles
+#hero-section {
+  width: 100%;
+  padding-left: $size-g;
+
+  .hero {
+    color: $text-white;
+    h1 {
+      font-size: $size-xl;
+      font-weight: bold;
+    }
+
+    h2 {
+      font-size: $size-l;
+      font-weight: bolder !important;
+    }
+
+    a {
+      margin-top: $padding-small;
+    }
+  }
+}
+
+// News section styles
+.news {
+  h2 {
+    font-size: $size-xl;
+    font-weight: bolder;
+    color: $text-white;
+    padding: $padding-small;
+  }
+
+
+  .card-title{
+    font-size: $size-m;
+    font-weight: bold;
+    color: $text-white !important;
+  }
+
+  .card-text {
+    font-size: $size-s;
+    color: $text-white !important;
+  }
+
+  .container .row .card {
+    border: none;
+
+    .btn-outline-light {
+      color: $text-white;
+      border-color: $text-white;
+
+      &:hover {
+        color: $text-white;
+        background-color: $text-white;
+      }
+    }
+  }
+}
+
+// Info section styles
+.info-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h2 {
+    margin-bottom: $padding-medium;
+    font-size: $size-xl;
+    text-align: center;
+  }
+
+  .info-box {
+    background-color: $text-white;
+    color: $text-white;
+    border-radius: $border-radius;
+    padding: $padding-medium;
+    margin-top: $padding-medium;
+    position: relative;
+
+    p {
+      font-size: 1.5rem;
+    }
+
+    .btn-more {
+      background-color: $color-red;
+      color: $text-white;
+      border: none;
+      border-radius: 5px;
+      padding: $padding-small $padding-medium;
+      cursor: pointer;
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+    }
+  }
+}
+
+// Department carousel styles
+#department-section {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+  .dept-carousel {
+    position: relative;
+    width: $card-size-lg;
+    height: $card-size-lg;
+    perspective: 500px;
+    transform-style: preserve-3d;
+
+    .dept-card-container {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      transform:
+              rotateY(calc(var(--offset) * 50deg))
+              scaleY(calc(1 + var(--abs-offset) * -0.4))
+              translateZ(calc(var(--abs-offset) * -30rem))
+              translateX(calc(var(--direction) * -5rem));
+      filter: blur(calc(var(--abs-offset) * 1rem));
+      transition: all 0.35s ease-out;
+    }
+
+    .dept-card {
+      width: 100%;
+      height: 100%;
+      padding: 2rem;
+      display: grid;
+      place-items: center;
+      border-radius: 1rem;
+      color: $text-white;
+      text-align: justify;
+      transition: all 0.3s ease-out;
+
+      .dept-icon {
+        width: $dept-icon-size;
+        height: $dept-icon-size;
+      }
+
+      h2 {
+        text-align: center;
+        font-size: 2rem;
+        font-weight: bold;
+        margin: 0 0 0.7em;
+        color: $text-white;
+      }
+
+      p, h2 {
+        transition: all 0.3s ease-out;
+        opacity: var(--active);
+      }
+    }
+
+    .dept-nav {
+      color: white;
+      font-size: 5rem;
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      top: 50%;
+      z-index: 2;
+      cursor: pointer;
+      user-select: none;
+      background: unset;
+      border: unset;
+
+      &.left {
+        transform: translateX(-100%) translateY(-50%);
+      }
+
+      &.right {
+        right: 0;
+        transform: translateX(100%) translateY(-50%);
+      }
+    }
+  }
+}
+
+// Media Queries
+@media (max-width: 480px) {
+  .dept-carousel {
+    position: relative;
+    width: $card-size-sm;
+    height: $card-size-sm;
+    perspective: 500px;
+    transform-style: preserve-3d;
+  }
+
+  #hero-section {
+    height: 40vh;
+    padding-left: $size-l;
+
+    .hero {
+      h1 {
+        font-size: $size-m;
+        font-weight: bold;
+      }
+
+      h2 {
+        font-size: $size-s;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .dept-carousel {
+    position: relative;
+    width: $card-size-md;
+    height: $card-size-md;
+    perspective: 500px;
+    transform-style: preserve-3d;
+  }
+
+  #hero-section {
+    height: 45vh;
+    padding-left: $size-xl;
+
+    .hero {
+      h1 {
+        font-size: $size-l;
+        font-weight: bold;
+      }
+
+      h2 {
+        font-size: $size-m;
+        font-weight: bold;
+      }
+    }
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .dept-carousel {
+    position: relative;
+    width: $card-size-md;
+    height: $card-size-md;
+    perspective: 500px;
+    transform-style: preserve-3d;
+  }
+
+  #hero-section {
+    height: 45vh;
+    padding-left: $size-xl;
+
+    .hero {
+      h1 {
+        font-size: $size-l;
+        font-weight: bold;
+      }
+
+      h2 {
+        font-size: $size-m;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  #hero-section {
+    height: 50vh;
+  }
+}
+
+@media (min-width: 1281px) {
+  #hero-section {
+    height: 52vh;
+  }
+}
