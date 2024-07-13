@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 const HeroSection = () => (
     <section id="hero-section">
         <div className="hero h-100 d-flex align-items-center">
@@ -121,10 +120,17 @@ const NewsSection = () => (
     </section>
 )
 
+const AboutSection = () =>(
+    <section className="AboutSection" id={"AboutSection"}>
+        <h1>About Section</h1>
+    </section>
+)
+
 const MainSection = () => (
     <main id="main-section">
         <HeroSection />
         <NewsSection />
+        <AboutSection />
     </main>
 )
 

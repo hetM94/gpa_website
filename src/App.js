@@ -3,7 +3,7 @@ import React from 'react';
 import './assets/styles/styles.scss'; // Import your SCSS styles here
 import Header from './assets/components/Header';
 import MainSection from "./assets/components/MainSection";
-import DeptCarousal from "./assets/components/DeptCarousal"; // Correct the import path
+import DeptSection from "./assets/components/DeptSection"; // Correct the import path
 import Footer from './assets/components/Footer';
 
 const App = () => {
@@ -11,7 +11,7 @@ const App = () => {
         <div className='app'>
             <Header />
             <MainSection />
-            <DeptCarousal />
+            <DeptSection />
             <Footer />
         </div>
     );

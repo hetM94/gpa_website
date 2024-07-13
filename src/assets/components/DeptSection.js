@@ -56,7 +56,7 @@ const Carousel = ({ children }) => {
     );
 };
 
-const DeptCarousel = () => (
+const DeptSection = () => (
     <section id="department-section" className={"d-lg-none"}>
         <Carousel>
             {[...new Array(CARDS)].map((_, i) => (
@@ -70,4 +70,4 @@ const DeptCarousel = () => (
     </section>
 );
 
-export default DeptCarousel;
+export default DeptSection;

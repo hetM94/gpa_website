@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0b946c13-8f5e-471c-9e52-9058a4a7bb25" name="Changes" comment="First Commit">
-      <change afterPath="$PROJECT_DIR$/src/assets/components/Footer.js" afterDir="false" />
+    <list default="true" id="0b946c13-8f5e-471c-9e52-9058a4a7bb25" name="Changes" comment="Minor Update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/components/DeptCarousal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/components/DeptCarousal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/styles/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/styles/styles.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/components/DeptCarousal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/components/DeptSection.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/components/MainSection.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/components/MainSection.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +94,7 @@
       <workItem from="1720701478039" duration="442000" />
       <workItem from="1720761343315" duration="3192000" />
       <workItem from="1720764627929" duration="246000" />
-      <workItem from="1720866351976" duration="1555000" />
+      <workItem from="1720866351976" duration="1895000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit">
       <option name="closed" value="true" />
@@ -106,7 +104,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720701620661</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Minor Update">
+      <option name="closed" value="true" />
+      <created>1720867958402</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1720867958402</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -125,6 +131,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="First Commit" />
+    <MESSAGE value="Minor Update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Minor Update" />
   </component>
 </project>
