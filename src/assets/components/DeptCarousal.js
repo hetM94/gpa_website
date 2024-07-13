@@ -61,6 +61,7 @@ const DeptCarousel = () => (
         <Carousel>
             {[...new Array(CARDS)].map((_, i) => (
                 <Card
+                    key={i}
                     title={`Card ${i + 1}`}
                     icon={icons[i]} // Pass the corresponding icon from the imported array
                 />

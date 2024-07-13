@@ -37,6 +37,7 @@ body {
 h1, h2 {
   font-family: "Lora", serif;
   font-weight: 400;
+  color: $text-white;
 }
 
 body::-webkit-scrollbar {
@@ -357,7 +358,7 @@ body::-webkit-scrollbar {
   }
 
   #hero-section {
-    height: 45vh;
+    height: 40vh;
     padding-left: $size-xl;
 
     .hero {
@@ -376,12 +377,38 @@ body::-webkit-scrollbar {
 
 @media (min-width: 1025px) and (max-width: 1280px) {
   #hero-section {
-    height: 50vh;
+    height: 45vh;
+    padding-left: $size-xl;
+
+    .hero {
+      h1 {
+        font-size: $size-l;
+        font-weight: bold;
+      }
+
+      h2 {
+        font-size: $size-m;
+        font-weight: bold;
+      }
+    }
   }
 }
 
 @media (min-width: 1281px) {
   #hero-section {
-    height: 52vh;
+    height: 50vh;
+    padding-left: $size-xl;
+
+    .hero {
+      h1 {
+        font-size: $size-xl;
+        font-weight: bold;
+      }
+
+      h2 {
+        font-size: $size-l;
+        font-weight: bold;
+      }
+    }
   }
 }
